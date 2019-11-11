@@ -3,6 +3,7 @@ import CreateBoard from "./CreateBoard";
 import { connect } from "react-redux";
 import "./App.css";
 import * as actionCreators from "./redux/actions/fetchAction.js";
+import Test from "./Test";
 
 class App extends Component {
   state = {};
@@ -15,6 +16,7 @@ class App extends Component {
     return (
       <div className="App">
         <CreateBoard />
+        <Test />
       </div>
     );
   }

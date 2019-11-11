@@ -1,7 +1,15 @@
 import React from "react";
+import { connect } from "react-redux";
 
-const CreateBoard = () => {
-  return <div>dziala create board</div>;
+const CreateBoard = ({ characters }) => {
+  const arr = characters.map(char => <div key={char.id}>{char.name}</div>);
+  return <div>{arr}</div>;
 };
 
-export default CreateBoard;
+const mapStateToProps = state => {
+  return {
+    characters: state.memoryReducer.characters
+  };
+};
+
+export default connect(mapStateToProps)(CreateBoard);

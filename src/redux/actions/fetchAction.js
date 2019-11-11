@@ -1,36 +1,34 @@
 import axios from "axios";
 
-// export function addCharacters() {
-//   // const request = axios.get("https://rickandmortyapi.com/api/character");
-//   return dispatch => {
-//     return (
-//       fetch("https://rickandmortyapi.com/api/character")
-//         // request
-//         .then(response => response.json())
-//         .then(data => {
-//           dispatch(characters(data));
-//         })
-//     );
-//   };
-// }
+//rickandmortyapi.com/api/character/1,2,3,4,5,6
 
+//get RickAndMorty API characters card and void characters function
 export function addCharacters() {
-  console.log("dziala");
-  // const request = axios.get("https://rickandmortyapi.com/api/character");
+  let arr = [];
+  for (let i = 0; arr.length < 6; i++) {
+    const number = Math.floor(Math.random() * 19);
+    let check = arr.filter(item => item === number);
+    if (check.length === 0) {
+      console.log(typeof check[0]);
+      arr.push(number);
+    }
+    console.log(arr);
+  }
   return dispatch => {
-    return (
-      axios
-        .get("https://rickandmortyapi.com/api/character")
-        // request
-        .then(response => {
-          dispatch(characters(response.data.results));
-        })
-    );
+    return axios
+      .get(
+        `https://rickandmortyapi.com/api/character/${arr[0]},${arr[1]},${
+          arr[2]
+        },${arr[3]},${arr[4]},${arr[5]}`
+      )
+      .then(response => {
+        dispatch(characters(response.data));
+      });
   };
 }
 
+//take random
 export function characters(data) {
-  console.log(data);
   return {
     type: "ADD_CHARACTERS",
     payload: data
