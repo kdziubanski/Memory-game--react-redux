@@ -1,22 +1,14 @@
 import React, { Component } from "react";
-
 import CreateBoard from "./CreateBoard";
+import { connect } from "react-redux";
 import "./App.css";
+import * as actionCreators from "./redux/actions/fetchAction.js";
 
 class App extends Component {
-  state = {
-    characters: []
-  };
+  state = {};
 
   componentDidMount() {
-    fetch("https://dragon-ball-api.herokuapp.com/api/character")
-      // .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        this.setState({
-          characters: data
-        });
-      });
+    this.props.addCharacters();
   }
 
   render() {
@@ -28,4 +20,11 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return state;
+};
+
+export default connect(
+  mapStateToProps,
+  actionCreators
+)(App);
