@@ -1,0 +1,23 @@
+[33mcommit d7cdf65b5591ef56f9948a025b19fe0ea186c292[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: dziubas <krzysztofdziubanski@gmail.com>
+Date:   Mon Nov 11 22:55:53 2019 +0100
+
+    add action and 6 random characters from API
+
+[33mcommit deb0d48cc309796d446c35f51759d997693e3772[m
+Author: dziubas <krzysztofdziubanski@gmail.com>
+Date:   Mon Nov 11 20:46:04 2019 +0100
+
+    Get RickAndMorty characters, setup fetch from API
+
+[33mcommit 86122c8fa246e8278501412263ae878d7a39d1ef[m
+Author: dziubas <krzysztofdziubanski@gmail.com>
+Date:   Mon Nov 11 00:38:10 2019 +0100
+
+    Initial commit
+
+[33mcommit 2e974e97dcca57e280789115784039eddec1700d[m
+Author: dziubas <krzysztofdziubanski@gmail.com>
+Date:   Sun Nov 10 22:34:26 2019 +0100
+
+    Initial commit from Create React App

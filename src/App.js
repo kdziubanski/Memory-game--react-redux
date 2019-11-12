@@ -3,7 +3,7 @@ import CreateBoard from "./CreateBoard";
 import { connect } from "react-redux";
 import "./App.css";
 import * as actionCreators from "./redux/actions/fetchAction.js";
-import Test from "./Test";
+// import Test from "./Test";
 
 class App extends Component {
   state = {};
@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div className="App">
         <CreateBoard />
-        <Test />
+        {/* <Test /> */}
       </div>
     );
   }
@@ -26,7 +26,4 @@ const mapStateToProps = state => {
   return state;
 };
 
-export default connect(
-  mapStateToProps,
-  actionCreators
-)(App);
+export default connect(mapStateToProps, actionCreators)(App);

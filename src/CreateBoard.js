@@ -1,9 +1,14 @@
 import React from "react";
+import "./App.css";
 import { connect } from "react-redux";
 
 const CreateBoard = ({ characters }) => {
-  const arr = characters.map(char => <div key={char.id}>{char.name}</div>);
-  return <div>{arr}</div>;
+  const createBoardTiles = characters.map(char => (
+    <div className="board__tile" key={char.id}>
+      <img src={char.image} alt="" />
+    </div>
+  ));
+  return <div className="board">{createBoardTiles}</div>;
 };
 
 const mapStateToProps = state => {
