@@ -23,16 +23,26 @@ export function addCharacters() {
 }
 
 //take random
-export function characters(data) {
-  function prepareArray(data) {
-    data = data.concat(data);
-    data = data.map((el, i) => ({ id: i, image: el.image }));
+// export function characters(data) {
+//   function prepareArray(data) {
+//     data = data.concat(data);
+//     data = data.map((el, i) => ({ id: i, image: el.image }));
 
-    return data;
-  }
+//     return data;
+//   }
+
+//   return {
+//     type: "ADD_CHARACTERS",
+//     payload: prepareArray(data)
+//   };
+// }
+
+export function characters(data) {
+  data = data.concat(data);
+  data = data.map((el, i) => ({ id: i, image: el.image }));
 
   return {
     type: "ADD_CHARACTERS",
-    payload: prepareArray(data)
+    payload: data
   };
 }

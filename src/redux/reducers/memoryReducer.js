@@ -1,4 +1,6 @@
 const initialState = {
+  boardSize: 12,
+  playWithCPU: true,
   characters: []
 };
 
@@ -7,7 +9,6 @@ const memoryReducer = (state = initialState, action) => {
     case "ADD_TILES":
       return state;
     case "ADD_CHARACTERS":
-      console.log(action.payload);
       return {
         ...state,
         characters: action.payload
