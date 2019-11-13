@@ -28,18 +28,18 @@
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
 }
 .board__input {
   display: block;
 }
 .board__tile {
-  flex-basis: 30%;
+  flex-basis: 25%;
   display: flex;
   justify-content: center;
 }
 img {
   width: 150px;
-  height: 125px;
+  height: 100%;
 }

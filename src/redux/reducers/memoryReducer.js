@@ -1,5 +1,5 @@
 const initialState = {
-  boardSize: 12,
+  boardSize: "",
   playWithCPU: true,
   characters: []
 };
@@ -12,6 +12,11 @@ const memoryReducer = (state = initialState, action) => {
       return {
         ...state,
         characters: action.payload
+      };
+    case "INPUT_VALUE":
+      return {
+        ...state,
+        boardSize: action.payload
       };
     default:
       return state;
