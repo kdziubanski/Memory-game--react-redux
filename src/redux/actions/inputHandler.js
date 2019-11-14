@@ -4,3 +4,9 @@ export const inputHandler = value => {
     payload: value
   };
 };
+export const revealTile = id => {
+  return {
+    type: "REVEAL_TILE",
+    payload: id
+  };
+};

@@ -2,11 +2,17 @@ import React from "react";
 import "./App.css";
 import { connect } from "react-redux";
 import * as actionCreators from "./redux/actions/fetchAction.js";
+// import { revealTile } from "./redux/actions/inputHandler";
 
-const CreateBoard = ({ characters, boardSize, addCharacters }) => {
+const CreateBoard = ({ characters, boardSize, addCharacters, revealTile }) => {
   const createBoardTiles = characters.map(char => (
     <div className="board__tile" key={char.id}>
-      <img src={char.image} alt="" />
+      <img
+        className={char.className}
+        src={char.image}
+        alt=""
+        onClick={() => revealTile(char.id)}
+      />
     </div>
   ));
   return (

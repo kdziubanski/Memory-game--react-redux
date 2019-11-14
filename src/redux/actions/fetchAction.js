@@ -24,10 +24,22 @@ export function addCharacters(boardSize) {
 
 export function addCharactersToArray(data) {
   data = data.concat(data);
-  data = data.map((el, i) => ({ id: i, image: el.image }));
+  data = data.map((el, i) => ({
+    id: i,
+    image: el.image,
+    className: "board__image hidden"
+  }));
 
   return {
     type: "ADD_CHARACTERS",
     payload: data
   };
 }
+
+export const revealTile = id => {
+  console.log(id);
+  return {
+    type: "REVEAL_TILE",
+    payload: id
+  };
+};

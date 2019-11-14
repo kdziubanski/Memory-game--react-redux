@@ -6,7 +6,7 @@ const BoardSettings = ({ selectHandler, boardSize }) => {
   return (
     <div className="board__input">
       <select onChange={selectHandler} name="board size">
-        <option value={boardSize}>Board size</option>
+        {/* <option value={boardSize}>Board size</option> */}
         <option value="12">12</option>
         <option value="16">16</option>
         <option value="20">20</option>
